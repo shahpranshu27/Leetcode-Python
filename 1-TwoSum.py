@@ -22,6 +22,8 @@
 #         # return lst1
 #         return []
 
+
+# Memory beats 86%
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         for index1 in range(len(nums)):
