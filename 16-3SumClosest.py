@@ -6,11 +6,11 @@ class Solution:
         if nums is None or len(nums)==0:
                 return None
 
-        for i in range(len(nums)-2):
-            l,r = i+1, len(nums)-1
+        for index1 in range(len(nums)-2):
+            left, right = index1+1, len(nums)-1
 
-            while l<r:
-                summ = nums[i]+nums[l]+nums[r]
+            while left<right:
+                summ = nums[index1]+nums[left]+nums[right]
                 if summ == target:
                     return summ
                 
@@ -18,8 +18,8 @@ class Solution:
                     ans = summ
                 
                 elif summ<target:
-                    l+=1
+                    left+=1
                 else:
-                    r-=1
+                    right-=1
 
         return ans
