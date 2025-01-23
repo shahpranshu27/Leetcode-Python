@@ -17,6 +17,12 @@ class Solution:
         
         # nums[i+1:] = reversed(nums[i+1:])
 
+        """
+        - Start by finding the first number from the right that’s smaller than the one after it. This is where we will make our change.
+        - Then, find the smallest number bigger than that number to the right of it, and swap them.
+        - Finally, make the rest of the numbers after the swap as small as possible by reversing them.
+        """
+        
         n = len(nums)
         
         pivot = -1
